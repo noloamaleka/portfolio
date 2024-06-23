@@ -1,0 +1,93 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3rem;
+  color: var(--form-text-color); /* variable for text color */
+}
+
+.container h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 30px;
+  color: var(--form-text-color); 
+}
+
+.container form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  max-width: 60rem; 
+}
+
+.container form input,
+.container form textarea {
+  width: 100%;
+  max-width: 60rem; 
+  padding: 1rem 2rem;
+  border-radius: 1.6rem;
+  outline: none;
+  border: 1px solid var(--form-border-color); 
+  background: var(--form-bg-color); 
+  color: var(--form-text-color); 
+  font-weight: 600;
+}
+
+.container form input::placeholder,
+.container form textarea::placeholder {
+  color: var(--form-placeholder-color); 
+}
+
+.container form textarea {
+  height: 20rem;
+  overflow-y: auto;
+  resize: none;
+}
+
+.container form button {
+  padding: 1rem 6rem;
+  text-transform: uppercase;
+  background: var(--form-button-bg-color); 
+  color: var(--form-button-text-color); 
+  border: none;
+  border-radius: 1.6rem;
+}
+
+.container-success {
+  margin-top: 10rem;
+  text-align: center;
+  color: var(--form-text-color); 
+}
+
+.container-success button {
+  border-radius: 0.6rem;
+  padding: 1rem;
+  margin-top: 0.8rem;
+  text-transform: uppercase;
+  text-align: center;
+  background: var(--form-button-bg-color); 
+  color: var(--form-button-text-color); 
+  border: none;
+}
+
+/* Default mode (dark mode) */
+:root {
+  --form-border-color: #FFFFFF; 
+  --form-bg-color: #212121; 
+  --form-text-color: #FFFFFF; 
+  --form-placeholder-color: #FFFFFF; 
+  --form-button-bg-color: var(--green); 
+  --form-button-text-color: #FFFFFF; 
+  --green: #23ce6b; 
+}
+
+html.light {
+  --form-border-color: #000000; /* Black border for light mode */
+  --form-bg-color: #f5f5f5; /* Light background */
+  --form-text-color: #212121; /* Dark text color */
+  --form-placeholder-color: #212121; /* Dark placeholder text */
+  --form-button-bg-color: var(--green); 
+  --form-button-text-color: #FFFFFF; 
+}
